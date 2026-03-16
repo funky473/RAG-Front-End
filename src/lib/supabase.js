@@ -1,0 +1,17 @@
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+
+export const supabaseMisconfigured =
+  !supabaseUrl ||
+  !supabaseAnonKey ||
+  supabaseUrl === 'https://your-project-ref.supabase.co' ||
+  supabaseAnonKey === 'your-anon-key-here'
+
+// Use placeholder values so the module loads even before .env is set up;
+// the app will render a setup banner instead of crashing.
+export const supabase = createClient(
+  supabaseUrl ?? 'https://placeholder.supabase.co',
+  supabaseAnonKey ?? 'placeholder'
+)
