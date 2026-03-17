@@ -43,7 +43,8 @@ export default function Login() {
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-slate-900">RAG Document Manager</h1>
-          <p className="text-slate-400 text-sm mt-1">Powered by Supabase</p>
+          <p className="text-slate-500 text-sm mt-1 font-medium">INFO 3601 — University of the West Indies</p>
+          <p className="text-slate-400 text-xs mt-0.5">St. Augustine Campus</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
